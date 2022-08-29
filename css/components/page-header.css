@@ -1,0 +1,48 @@
+.page-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-cyan);
+}
+
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 16px;
+  align-items: center;
+}
+
+.page-header .circle-btn {
+  margin-right: 16px;
+}
+
+.page-header .profile-btn,
+.page-header .circle-btn:last-child {
+  margin-right: 0;
+}
+
+.page-header__left,
+.page-header__right {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .page-header__left .divider {
+    order: -1;
+  }
+
+  .page-header .burger-btn {
+    order: -1;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .page-header {
+    display: none;
+  }
+}

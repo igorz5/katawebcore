@@ -1,0 +1,27 @@
+.divider {
+  display: inline-block;
+  width: 2px;
+  height: 32px;
+  background-color: var(--light-grey);
+  margin: 0 20px;
+}
+
+.only-screen-768 {
+  display: none;
+}
+
+.only-screen-1120 {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .only-screen-768 {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .only-screen-1120 {
+    display: block;
+  }
+}

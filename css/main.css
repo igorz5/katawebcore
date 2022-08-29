@@ -1,0 +1,10 @@
+@import url("./general/nornalize.css");
+@import url("./general/base.css");
+@import url("./general/fonts.css");
+@import url("./general/utils.css");
+
+@import url("./components/page-header.css");
+@import url("./components/circle-btn.css");
+@import url("./components/services.css");
+@import url("./components/services-menu.css");
+@import url("./components/logo.css");

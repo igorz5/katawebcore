@@ -1,0 +1,132 @@
+.services .container {
+  padding-top: 24px;
+}
+
+.services__top {
+  position: relative;
+  display: flex;
+  margin-bottom: 24px;
+  padding: 0 12px;
+  justify-content: space-between;
+}
+
+.services__top::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  background-color: var(--cyan);
+  border-radius: 10px;
+  height: 40px;
+  left: 0;
+  margin-right: 12px;
+}
+
+.services__top-buttons {
+  display: none;
+}
+
+.services__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary-color);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.services__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__text-wrap {
+  padding: 0 16px;
+}
+
+.services__block p {
+  font-size: 14px;
+  line-height: 1.29;
+  margin-bottom: 16px;
+  letter-spacing: 0.2px;
+  color: var(--text-primary-color);
+}
+
+.services__next-link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.services__next-link::before {
+  display: inline-block;
+  content: url("../../img/icons/expand.svg");
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.services__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .services__top {
+    margin-bottom: 24px;
+    padding: 0 24px;
+  }
+
+  .services__block {
+    flex-direction: row;
+    padding: 0 24px;
+  }
+
+  .services__block p {
+    line-height: 1.43;
+  }
+
+  .services__text-wrap {
+    margin-right: 48px;
+    width: 50%;
+    padding: 0;
+  }
+
+  .services__image {
+    width: 55%;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .services .container {
+    padding-top: 42px;
+  }
+
+  .services__top {
+    margin-bottom: 8px;
+    padding: 0 32px;
+    margin-bottom: 8px;
+  }
+
+  .services__top-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .services__top .circle-btn {
+    margin-right: 32px;
+  }
+
+  .services__top .circle-btn:last-child {
+    margin-right: 0;
+  }
+
+  .services__block {
+    padding: 0 32px;
+  }
+
+  .services__text-wrap {
+    margin-right: 36px;
+  }
+}
