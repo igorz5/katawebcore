@@ -1,3 +1,7 @@
+.services {
+  flex: 1;
+}
+
 .services .container {
   padding-top: 24px;
 }

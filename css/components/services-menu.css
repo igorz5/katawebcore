@@ -33,16 +33,11 @@
   cursor: pointer;
 }
 
-.services-menu__item:not(:last-child) {
-  margin-right: 2px;
-}
-
 .services-menu__item:last-child {
   margin-right: 16px;
 }
 
-.services-menu__item.active,
-.services-menu__item:hover {
+.services-menu__item.active {
   border: 2px solid var(--light-cyan);
   background-color: var(--white);
 }
