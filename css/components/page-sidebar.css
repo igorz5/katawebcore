@@ -1,0 +1,128 @@
+.page-sidebar {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 0 15px 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  z-index: 1;
+  min-height: 100vh;
+  padding: 18px 24px 32px;
+  padding-left: 0;
+  width: 320px;
+}
+
+.page-sidebar.active {
+  display: flex;
+}
+
+.page-sidebar__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 46px;
+  padding-left: 24px;
+}
+
+.page-sidebar .close-btn {
+  margin-right: 16px;
+}
+
+.page-sidebar .search-btn {
+  margin-left: auto;
+}
+
+.page-sidebar__list {
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.page-sidebar__item {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  color: var(--text-primary-color);
+}
+
+.page-sidebar__item.active {
+  color: var(--grey);
+  pointer-events: none;
+}
+
+.page-sidebar__item.active::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  background-color: var(--cyan);
+  border-radius: 10px;
+  height: 32px;
+  left: 0;
+  margin-right: 12px;
+  transform: translateX(-50%);
+}
+
+.page-sidebar__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.page-sidebar__bottom {
+  margin-top: auto;
+  padding-left: 24px;
+}
+
+.page-sidebar__buttons-list {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.page-sidebar__buttons-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.page-sidebar .contacts {
+  margin-bottom: 40px;
+}
+
+.page-sidebar__language-list {
+  display: flex;
+}
+
+.page-sidebar__language-item {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary-color);
+}
+
+.page-sidebar__language-item.active {
+  color: var(--grey);
+  pointer-events: none;
+}
+
+.page-sidebar__language-item:not(:last-child) {
+  margin-right: 7px;
+}
+
+@media screen and (min-width: 1120px) {
+  .page-sidebar {
+    position: relative;
+    width: 360px;
+    box-shadow: none;
+    padding-top: 30px;
+  }
+
+  .page-sidebar .close-btn {
+    display: none;
+  }
+
+  .page-sidebar__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-sidebar__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}

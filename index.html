@@ -36,7 +36,7 @@
             </button>
             <button class="chat-btn circle-btn only-screen-768">
               <img
-                src="./img/icons/message.svg"
+                src="./img/icons/chat.svg"
                 alt="Icon"
                 class="circle-btn__icon"
               />
@@ -67,12 +67,113 @@
         </div>
       </header>
       <main class="page-main">
+        <div class="page-sidebar active">
+          <div class="page-sidebar__top">
+            <button class="close-btn circle-btn">
+              <img
+                src="./img/icons/cross.svg"
+                alt="Icon"
+                class="circle-btn__icon"
+              />
+            </button>
+            <div class="logo">
+              <a href="/" class="logo__link">
+                <img src="./img/logo.svg" alt="Logo" class="logo__image" />
+              </a>
+            </div>
+            <button class="search-btn circle-btn">
+              <img
+                src="./img/icons/search.svg"
+                alt="Icon"
+                class="circle-btn__icon"
+              />
+            </button>
+          </div>
+          <ul class="page-sidebar__list">
+            <li class="page-sidebar__item active">
+              <a href="#" class="page-sidebar__link">Ремонт техники</a>
+            </li>
+            <li class="page-sidebar__item">
+              <a href="#" class="page-sidebar__link">Услуги и сервисы</a>
+            </li>
+            <li class="page-sidebar__item">
+              <a href="#" class="page-sidebar__link">Корпоративным клиентам</a>
+            </li>
+            <li class="page-sidebar__item">
+              <a href="#" class="page-sidebar__link">Продавцам техники</a>
+            </li>
+            <li class="page-sidebar__item">
+              <a href="#" class="page-sidebar__link">Партнерам</a>
+            </li>
+            <li class="page-sidebar__item">
+              <a href="#" class="page-sidebar__link">Производителям</a>
+            </li>
+            <li class="page-sidebar__item">
+              <a href="#" class="page-sidebar__link">Наши сервисные центры</a>
+            </li>
+            <li class="page-sidebar__item">
+              <a href="#" class="page-sidebar__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="page-sidebar__bottom">
+            <ul class="page-sidebar__buttons-list">
+              <li class="page-sidebar__buttons-item">
+                <button class="call-btn circle-btn">
+                  <img
+                    src="./img/icons/phone.svg"
+                    alt="Icon"
+                    class="circle-btn__icon"
+                  />
+                </button>
+              </li>
+              <li class="page-sidebar__buttons-item">
+                <button class="chat-btn circle-btn">
+                  <img
+                    src="./img/icons/chat.svg"
+                    alt="Icon"
+                    class="circle-btn__icon"
+                  />
+                </button>
+              </li>
+              <li class="page-sidebar__buttons-item">
+                <button class="profile-btn circle-btn">
+                  <img
+                    src="./img/icons/profile.svg"
+                    alt="Icon"
+                    class="circle-btn__icon"
+                  />
+                </button>
+              </li>
+            </ul>
+
+            <address class="contacts">
+              <a href="mailto:mail@cps.com" class="contacts__email">
+                mail@cps.com
+              </a>
+              <a href="tel:+78008908900" class="contacts__phone">
+                8 800 890 8900
+              </a>
+            </address>
+
+            <ul class="page-sidebar__language-list">
+              <li class="page-sidebar__language-item active">
+                <a href="#" class="page-sidebar__language-link">RU</a>
+              </li>
+              <li class="page-sidebar__language-item">
+                <a href="#" class="page-sidebar__language-link">EN</a>
+              </li>
+              <li class="page-sidebar__language-item">
+                <a href="#" class="page-sidebar__language-link">CH</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <section class="services">
           <div class="container">
             <div class="services__top">
               <h1 class="services__title">Услуги и сервисы</h1>
               <div class="services__top-buttons">
-                <span class="circle-btn__title"> Оставить заявку </span>
+                <span class="circle-btn__title">Оставить заявку</span>
                 <button class="repair-btn circle-btn">
                   <img
                     src="./img/icons/tools.svg"
@@ -80,7 +181,7 @@
                     class="circle-btn__icon"
                   />
                 </button>
-                <span class="circle-btn__title"> Статус ремонта </span>
+                <span class="circle-btn__title">Статус ремонта</span>
                 <button class="checkstatus-btn circle-btn">
                   <img
                     src="./img/icons/checkstatus.svg"

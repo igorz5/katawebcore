@@ -1,5 +1,6 @@
 .services {
   flex: 1;
+  overflow: hidden;
 }
 
 .services .container {
@@ -21,7 +22,7 @@
   background-color: var(--cyan);
   border-radius: 10px;
   height: 40px;
-  left: 0;
+  left: 2px;
   margin-right: 12px;
 }
 
@@ -50,7 +51,6 @@
   font-size: 14px;
   line-height: 1.29;
   margin-bottom: 16px;
-  letter-spacing: 0.2px;
   color: var(--text-primary-color);
 }
 

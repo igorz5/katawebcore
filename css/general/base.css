@@ -28,6 +28,8 @@ body {
   font-family: "TT Lakes", sans-serif;
   font-size: 16px;
   font-style: normal;
+  letter-spacing: -0.2px;
+  overflow-x: hidden;
 }
 
 /* Reset */
@@ -54,10 +56,14 @@ img {
   max-width: 100%;
 }
 
+address {
+  font-style: normal;
+}
+
 /* Reset end */
 
 .wrapper {
-  overflow: hidden;
+  position: relative;
 }
 
 .container {
