@@ -9,16 +9,14 @@
   --grey: #7e7e82;
   --light-grey: #eaeaea;
   --bg-color: #f8f8f8;
-}
-
-html {
-  box-sizing: border-box;
+  --pagination-color: #dddddd;
+  --pagination-active-color: #b5b6bc;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -73,4 +71,9 @@ address {
 
 .page-main {
   display: flex;
+}
+
+.page-main__wrap {
+  width: 100%;
+  overflow: hidden;
 }

@@ -1,0 +1,139 @@
+.brands__inner {
+  padding-top: 24px;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.brands__list-wrap {
+  position: relative;
+  padding-left: 24px;
+}
+
+.brands__list-wrap::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, var(--bg-color) 30%, transparent)
+    no-repeat right / cover;
+  z-index: 10;
+}
+
+.brands__list {
+  display: flex;
+  align-items: center;
+}
+
+.brands__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 6px;
+  border: 1px solid var(--light-grey);
+  max-width: 240px;
+  height: 72px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+.brands__item-btn {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border: 2px solid var(--circle-btn-color);
+  border-radius: 50%;
+  transition: 0.2s;
+  opacity: 1;
+}
+
+.brands__item-btn:hover {
+  transform: translateX(6px);
+}
+
+.brands__brand-image {
+  max-width: 50%;
+  max-height: 100%;
+}
+
+.brands__item-btn::after {
+  display: inline-block;
+  content: url("../../img/icons/arrow.svg");
+  position: absolute;
+  max-width: 7px;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+
+.brands__show-all-btn {
+  display: none;
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+.brands__pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.brands__pagination .swiper-pagination-bullet {
+  background-color: var(--pagination-color);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.brands__pagination .swiper-pagination-bullet-active {
+  background-color: var(--pagination-active-color);
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .brands__list-wrap {
+    padding-left: 24px;
+  }
+
+  .brands__list {
+    overflow: clip;
+    flex-wrap: wrap;
+  }
+
+  .brands__item {
+    width: calc(100% / 3 - 24px);
+    margin-right: 24px;
+    max-width: none;
+  }
+
+  .brands__pagination {
+    display: none;
+  }
+
+  .brands__show-all-btn {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .brands__inner {
+    padding-top: 32px;
+  }
+
+  .brands__list-wrap {
+    padding-left: 24px;
+  }
+
+  .brands__item {
+    width: calc(100% / 4 - 24px);
+    margin-right: 24px;
+  }
+}

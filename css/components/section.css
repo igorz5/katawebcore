@@ -1,0 +1,27 @@
+.section {
+  margin-bottom: 24px;
+}
+
+.section__top {
+  background-color: var(--white);
+  border-top: 1px solid var(--light-cyan);
+}
+
+.section__top-container {
+  padding: 16px 32px;
+}
+
+.section__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1120px) {
+  .section__top {
+    background: none;
+    border-top: none;
+  }
+}

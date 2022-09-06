@@ -24,6 +24,10 @@
   -ms-overflow-style: none;
 }
 
+.services-menu__list::-webkit-scrollbar {
+  display: none;
+}
+
 .services-menu__item {
   padding: 6px 16px;
   font-weight: 500;

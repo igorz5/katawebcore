@@ -81,7 +81,7 @@
   margin-right: 16px;
 }
 
-.page-sidebar .contacts {
+.page-sidebar__contacts {
   margin-bottom: 40px;
 }
 
@@ -104,8 +104,15 @@
   margin-right: 7px;
 }
 
+@media screen and (min-width: 768px) {
+  .page-sidebar__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
 @media screen and (min-width: 1120px) {
   .page-sidebar {
+    display: flex;
     position: relative;
     width: 360px;
     box-shadow: none;
@@ -118,11 +125,5 @@
 
   .page-sidebar__item:not(:last-child) {
     margin-bottom: 28px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page-sidebar__item:not(:last-child) {
-    margin-bottom: 32px;
   }
 }
