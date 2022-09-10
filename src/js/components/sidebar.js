@@ -33,5 +33,7 @@ function init() {
 }
 
 export default {
-  init: init
+  init: init,
+  open: open,
+  close: close
 };

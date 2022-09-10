@@ -84,3 +84,10 @@ address {
 span.highlight {
   color: var(--highlight-color);
 }
+
+@include screen-1120 {
+  body.no-scroll {
+    padding-right: 17px;
+    overflow: hidden;
+  }
+}

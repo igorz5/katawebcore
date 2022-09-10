@@ -1,6 +1,7 @@
 "use strict";
 
 import overlay from "./overlay";
+import sidebar from "./sidebar";
 
 function init(modal, openBtn, closeBtn) {
   const modalElem = document.querySelector(modal);
@@ -9,19 +10,22 @@ function init(modal, openBtn, closeBtn) {
     modalElem.classList.add("modal--active");
     overlay.enable();
 
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("no-scroll");
   };
 
   const closeModal = function () {
     modalElem.classList.remove("modal--active");
     overlay.disable();
 
-    document.body.style.overflow = "";
+    document.body.classList.remove("no-scroll");
   };
 
   const openBtns = document.querySelectorAll(openBtn);
   for (const btn of openBtns) {
-    btn.addEventListener("click", openModal);
+    btn.addEventListener("click", function () {
+      sidebar.close();
+      openModal();
+    });
   }
 
   const closeBtns = document.querySelectorAll(closeBtn);
