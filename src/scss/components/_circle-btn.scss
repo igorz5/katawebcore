@@ -1,0 +1,53 @@
+.circle-btn {
+  background-color: var(--btn-color);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background-color: var(--btn-hover-color);
+  }
+
+  &__title {
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: right;
+    font-weight: 500;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.circle-btn--arrow {
+  position: relative;
+  background-color: var(--white);
+  border: 2px solid var(--btn-color);
+  border-radius: 50%;
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    transform: translateX(6px);
+    background-color: var(--white);
+  }
+
+  &::after {
+    display: inline-block;
+    content: url("../img/icons/arrow.svg");
+    position: absolute;
+    max-width: 7px;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+  }
+}

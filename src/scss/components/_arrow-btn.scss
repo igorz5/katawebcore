@@ -1,0 +1,29 @@
+.arrow-btn {
+  background-color: var(--btn-color);
+  padding: 5px 24px;
+  padding-right: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  text-transform: uppercase;
+  color: var(--white);
+  border-radius: 16px;
+  transition: 0.3s ease-out;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-color);
+  }
+
+  &::after {
+    content: url("../img/icons/white-arrow.svg");
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 22px;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

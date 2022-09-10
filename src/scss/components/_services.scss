@@ -1,0 +1,141 @@
+.services {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 51px;
+
+  .container {
+    padding-top: 24px;
+  }
+
+  &__top {
+    display: flex;
+    margin-bottom: 24px;
+    padding: 0 12px;
+    justify-content: space-between;
+  }
+
+  &__top::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    background-color: var(--cyan);
+    border-radius: 10px;
+    height: 40px;
+    left: 2px;
+  }
+
+  &__top-buttons {
+    display: none;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary-color);
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  &__inner {
+    padding: 0 16px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-wrap {
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  &__block p {
+    font-size: 14px;
+    line-height: 1.29;
+    margin-bottom: 16px;
+    color: var(--text-primary-color);
+  }
+
+  &__block p:last-child {
+    margin-bottom: 0;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__next-btn {
+    display: none;
+    margin-bottom: 16px;
+  }
+
+  @include screen-768 {
+    &__top {
+      margin-bottom: 24px;
+      padding: 0 24px;
+    }
+
+    &__inner {
+      padding: 0 24px;
+    }
+
+    &__block {
+      flex-direction: row;
+    }
+
+    &__block p {
+      line-height: 1.43;
+    }
+
+    &__block-left {
+      margin-right: 48px;
+      width: 50%;
+      padding: 0;
+    }
+
+    &__block-right {
+      max-width: 45%;
+    }
+
+    &__image {
+      border-radius: 6px;
+    }
+
+    &__next-btn {
+      margin-bottom: 0;
+    }
+  }
+
+  @include screen-1120 {
+    padding-top: 42px;
+
+    &__top {
+      margin-bottom: 8px;
+      padding: 0 32px;
+      margin-bottom: 8px;
+    }
+
+    &__top-buttons {
+      display: flex;
+      align-items: center;
+    }
+
+    &__top .circle-btn {
+      margin-right: 32px;
+    }
+
+    &__top .circle-btn:last-child {
+      margin-right: 0;
+    }
+
+    &__inner {
+      padding: 0 32px;
+    }
+
+    &__block-left {
+      margin-right: 36px;
+    }
+  }
+}

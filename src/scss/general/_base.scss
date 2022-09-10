@@ -1,0 +1,86 @@
+:root {
+  --btn-color: #ff3e79;
+  --btn-hover-color: #f1336d;
+  --highlight-color: #ff3e79;
+  --white: #ffffff;
+  --text-primary-color: #1b1c21;
+  --text-secondary-color: #7e7e82;
+  --cyan: #41f6d7;
+  --light-cyan: #b8ffec;
+  --border-color: #d9fff5;
+  --grey: #7e7e82;
+  --light-grey: #eaeaea;
+  --bg-color: #f8f8f8;
+  --pagination-color: #dddddd;
+  --pagination-active-color: #b5b6bc;
+  --z-sidebar: 50;
+  --z-overlay: 80;
+  --z-modal: 100;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -0.2px;
+  overflow-x: hidden;
+}
+
+/* Reset */
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Reset end */
+
+.wrapper {
+  position: relative;
+  @include screen-1120 {
+    margin-left: 360px;
+  }
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.page-main {
+  overflow: hidden;
+}
+
+span.highlight {
+  color: var(--highlight-color);
+}

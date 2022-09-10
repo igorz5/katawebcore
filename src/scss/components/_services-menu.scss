@@ -1,0 +1,72 @@
+.services-menu {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, var(--bg-color) 30%, transparent)
+      no-repeat right / cover;
+  }
+
+  &__list {
+    display: flex;
+    overflow: scroll;
+
+    @include hide-scrollbar;
+  }
+
+  &__item {
+    padding: 6px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-secondary-color);
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &--active {
+      border: 2px solid var(--light-cyan);
+      background-color: var(--white);
+      pointer-events: none;
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 16px;
+  }
+  @include screen-768 {
+    margin-bottom: 32px;
+  }
+
+  @include screen-1120 {
+    margin-bottom: 12px;
+    &::after {
+      background: none;
+    }
+
+    &__list {
+      overflow: hidden;
+    }
+
+    &__item {
+      margin-bottom: 4px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}

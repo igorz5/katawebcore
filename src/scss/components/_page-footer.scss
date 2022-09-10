@@ -1,0 +1,47 @@
+.page-footer {
+  border-top: 1px solid var(--border-color);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 33px 24px 16px;
+  }
+
+  &__text {
+    color: var(--text-secondary-color);
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  &__col {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  @include screen-768 {
+    &__container {
+      flex-direction: row;
+    }
+
+    &__col {
+      margin-bottom: 0;
+      flex: 3;
+    }
+
+    &__col:first-child {
+      text-align: left;
+      flex: 2;
+    }
+
+    &__col:last-child {
+      text-align: right;
+      flex: 2;
+    }
+  }
+
+  @include screen-1120 {
+    &__container {
+      padding: 32px 32px 21px;
+    }
+  }
+}

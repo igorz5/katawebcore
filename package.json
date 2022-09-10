@@ -1,10 +1,10 @@
 {
-  "name": "webpack-test",
+  "name": "katawebcore",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "license": "ISC",
-  "author": "",
+  "author": "igorz",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -20,7 +20,6 @@
     "not OperaMini All",
     "not dead"
   ],
-
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@babel/preset-env": "7.5.5",
@@ -48,5 +47,16 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorz5/katawebcore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igorz5/katawebcore/issues"
+  },
+  "homepage": "https://github.com/igorz5/katawebcore#readme",
+  "dependencies": {
+    "swiper": "^8.3.2"
   }
 }

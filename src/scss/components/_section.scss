@@ -1,0 +1,43 @@
+.section {
+  margin-bottom: 24px;
+
+  &__top {
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+    margin-bottom: 24px;
+  }
+
+  &__top-container {
+    padding: 16px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--grey);
+    text-transform: uppercase;
+  }
+
+  @include screen-768 {
+    margin-bottom: 32px;
+
+    &__top-container {
+      padding: 16px 24px;
+    }
+  }
+
+  @include screen-1120 {
+    margin-bottom: 50px;
+
+    &__top-container {
+      padding: 16px 32px;
+    }
+
+    &__top {
+      background: none;
+      border-top: none;
+      margin-bottom: 32px;
+    }
+  }
+}

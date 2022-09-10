@@ -1,0 +1,139 @@
+.page-sidebar {
+  position: fixed;
+  top: 0;
+  left: -500px;
+  box-shadow: 3px 0 15px 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  z-index: var(--z-modal);
+  height: 100vh;
+  padding: 18px 24px 32px;
+  padding-left: 0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  transition: 0.5s;
+  visibility: hidden;
+
+  @include hide-scrollbar;
+
+  &--active {
+    left: 0;
+    visibility: visible;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 46px;
+    padding-left: 16px;
+  }
+
+  .close-btn {
+    margin-right: 16px;
+  }
+
+  .search-btn {
+    margin-left: auto;
+  }
+
+  &__list {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    color: var(--text-primary-color);
+
+    &--active {
+      color: var(--grey);
+      pointer-events: none;
+    }
+
+    &--active::before {
+      position: absolute;
+      content: "";
+      width: 4px;
+      background-color: var(--cyan);
+      border-radius: 10px;
+      height: 32px;
+      left: 2px;
+      margin-right: 12px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    padding-left: 24px;
+  }
+
+  &__buttons-list {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__contacts {
+    margin-bottom: 40px;
+  }
+
+  &__language-list {
+    display: flex;
+  }
+
+  &__language {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-primary-color);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+
+    &--active {
+      color: var(--grey);
+      pointer-events: none;
+    }
+  }
+
+  @include screen-768 {
+    &__top {
+      padding-left: 24px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include screen-1120 {
+    z-index: var(--z-sidebar);
+
+    width: 360px;
+    box-shadow: none;
+    padding-top: 30px;
+    left: 0;
+    visibility: visible;
+
+    .close-btn {
+      display: none;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.page-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-cyan);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 16px;
+    align-items: center;
+  }
+
+  .circle-btn {
+    margin-right: 16px;
+  }
+
+  .profile-btn,
+  .circle-btn:last-child {
+    margin-right: 0;
+  }
+
+  .burger-btn {
+    margin-right: 16px;
+  }
+
+  .call-btn,
+  .chat-btn,
+  .profile-btn {
+    display: none;
+  }
+
+  &__divider {
+    position: relative;
+  }
+
+  &__divider::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    width: 2px;
+    height: 32px;
+    background-color: var(--light-grey);
+    transform: translateY(-50%);
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    margin-right: 20px;
+
+    &.page-header__divider::after {
+      display: block;
+    }
+  }
+
+  @include screen-768 {
+    .container {
+      padding: 18px 24px;
+    }
+
+    .burger-btn {
+      margin-right: 40px;
+
+      &.page-header__divider::after {
+        display: block;
+      }
+    }
+
+    .call-btn,
+    .chat-btn,
+    .profile-btn {
+      display: block;
+    }
+
+    .profile-btn {
+      margin-right: 42px;
+
+      &.page-header__divider::after {
+        display: block;
+      }
+    }
+
+    &__left.page-header__divider::after {
+      display: none;
+    }
+  }
+
+  @include screen-1120 {
+    display: none;
+  }
+}
