@@ -23,9 +23,7 @@ function init() {
 
   collapse();
 
-  window.addEventListener("resize", function () {
-    collapse();
-  });
+  window.addEventListener("resize", updateMaxHeight);
 }
 
 function isOpen() {
@@ -36,21 +34,31 @@ function measureHeight() {
   return firstText ? firstText.offsetHeight : 0;
 }
 
+function updateMaxHeight() {
+  if (isOpen()) {
+    textWrap.style.maxHeight = `${textWrap.scrollHeight}px`;
+  } else {
+    const height = measureHeight();
+    textWrap.style.maxHeight = `${height}px`;
+  }
+}
+
 function expand() {
-  textWrap.style.maxHeight = `${textWrap.scrollHeight}px`;
   nextButton.textContent = "Скрыть";
 
   nextButton.classList.add("dropdown-btn--close");
   block.classList.add("services__block--show");
+
+  updateMaxHeight();
 }
 
 function collapse() {
-  const height = measureHeight();
-  textWrap.style.maxHeight = `${height}px`;
   nextButton.textContent = "Читать далее";
 
   nextButton.classList.remove("dropdown-btn--close");
   block.classList.remove("services__block--show");
+
+  updateMaxHeight();
 }
 
 export default {

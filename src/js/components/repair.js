@@ -17,7 +17,7 @@ function init() {
   collapse();
 
   window.addEventListener("resize", function () {
-    collapse();
+    updateMaxHeight();
     initSwiper();
   });
 
@@ -55,21 +55,31 @@ function isOpen() {
   return repairList.classList.contains("repair__list--show");
 }
 
+function updateMaxHeight() {
+  if (isOpen()) {
+    repairListWrap.style.maxHeight = `${repairListWrap.scrollHeight}px`;
+  } else {
+    const height = measureHeight();
+    repairListWrap.style.maxHeight = `${height}px`;
+  }
+}
+
 function expand() {
-  repairListWrap.style.maxHeight = `${repairListWrap.scrollHeight}px`;
   showAllButton.textContent = "Скрыть";
 
   showAllButton.classList.add("dropdown-btn--close");
   repairList.classList.add("repair__list--show");
+
+  updateMaxHeight();
 }
 
 function collapse() {
-  const height = measureHeight();
-  repairListWrap.style.maxHeight = `${height}px`;
   showAllButton.textContent = "Показать все";
 
   showAllButton.classList.remove("dropdown-btn--close");
   repairList.classList.remove("repair__list--show");
+
+  updateMaxHeight();
 }
 
 export default {

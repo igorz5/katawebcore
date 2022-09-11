@@ -20,7 +20,7 @@ function init() {
   collapse();
 
   window.addEventListener("resize", function () {
-    collapse();
+    updateMaxHeight();
     initSwiper();
   });
 
@@ -50,6 +50,10 @@ function initSwiper() {
   }
 }
 
+function isOpen() {
+  return brandsList.classList.contains("brands__list--show");
+}
+
 function measureHeight() {
   let height = 0;
   if (brandsItem) {
@@ -59,25 +63,31 @@ function measureHeight() {
   return height;
 }
 
-function isOpen() {
-  return brandsList.classList.contains("brands__list--show");
+function updateMaxHeight() {
+  if (isOpen()) {
+    brandsInner.style.maxHeight = `${brandsInner.scrollHeight}px`;
+  } else {
+    const height = measureHeight();
+    brandsInner.style.maxHeight = `${height}px`;
+  }
 }
 
 function expand() {
-  brandsInner.style.maxHeight = `${brandsInner.scrollHeight}px`;
   showAllButton.textContent = "Скрыть";
 
   showAllButton.classList.add("dropdown-btn--close");
   brandsList.classList.add("brands__list--show");
+
+  updateMaxHeight();
 }
 
 function collapse() {
-  const height = measureHeight();
-  brandsInner.style.maxHeight = `${height}px`;
   showAllButton.textContent = "Показать все";
 
   showAllButton.classList.remove("dropdown-btn--close");
   brandsList.classList.remove("brands__list--show");
+
+  updateMaxHeight();
 }
 
 export default {
