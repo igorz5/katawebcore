@@ -17,11 +17,11 @@ function init() {
     }
   });
 
-  if (textWrap.scrollHeight > measureHeight()) {
-    nextButton.style.display = "block";
-  }
-
   collapse();
+
+  if (textWrap.scrollHeight <= measureHeight()) {
+    nextButton.style.display = "none";
+  }
 
   window.addEventListener("resize", updateMaxHeight);
 }

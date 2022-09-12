@@ -30,6 +30,8 @@ function init() {
   closeBtn.addEventListener("click", close);
 
   overlay.element().addEventListener("click", close);
+
+  window.addEventListener("resize", close);
 }
 
 export default {

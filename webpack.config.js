@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = (env, argv) => {
+  const isDev = argv.mode === "development";
+
   return {
     // Входной файл
     entry: ["./src/js/index.js"],
@@ -14,7 +16,7 @@ module.exports = (env, argv) => {
     },
 
     // Source maps для удобства отладки
-    devtool: "source-map",
+    devtool: isDev ? "source-map" : "",
 
     module: {
       rules: [
@@ -39,19 +41,19 @@ module.exports = (env, argv) => {
             {
               loader: "css-loader",
               options: {
-                sourceMap: argv.mode === "development"
+                sourceMap: isDev
               }
             },
             {
               loader: "postcss-loader",
               options: {
-                sourceMap: argv.mode === "development"
+                sourceMap: isDev
               }
             },
             {
               loader: "sass-loader",
               options: {
-                sourceMap: argv.mode === "development"
+                sourceMap: isDev
               }
             }
           ]
